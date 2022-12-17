@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Dec 17 22:27:50 2022
+
+@author: Cameron Hill
+"""
+
+
 import csv
 from src.reminder import PoliteReminder
 from src.deadlined_reminders import Datereminder
