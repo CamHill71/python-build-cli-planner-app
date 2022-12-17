@@ -9,8 +9,6 @@ from abc import ABCMeta,abstractmethod,ABC
 from collections.abc import Iterable
 from dateutil.parser import parse
 from datetime import datetime
-
-
 class DeadlinedMetaReminder(Iterable,metaclass=ABCMeta):
 
     @abstractmethod
@@ -29,6 +27,8 @@ class DeadlinedReminder(ABC,Iterable):
 
 
 class Datereminder(DeadlinedReminder):
-    def __init__(self,text,date) -> None:        
-        self.date = parse(date,dayfirst=True)
+    def __init__(self,text,date):        
+        self.date = parse(date.isoformat(),dayfirst=True)
         self.text = text
+
+      
