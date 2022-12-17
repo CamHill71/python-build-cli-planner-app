@@ -26,9 +26,9 @@ class DeadlinedReminder(ABC,Iterable):
         return iter([text, formatted_date])
 
 
-class Datereminder(DeadlinedReminder):
+class DateReminder(DeadlinedReminder):
     def __init__(self,text,date):        
-        self.date = parse(date.isoformat(),dayfirst=True)
+        self.date = parse(date,dayfirst=True)
         self.text = text
 
       
