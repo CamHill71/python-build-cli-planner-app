@@ -11,17 +11,17 @@ from dateutil.parser import parse
 from datetime import datetime
 
 
-class DeadlinedMetaReminder(ABCMeta):
+class DeadlinedMetaReminder(Iterable,metaclass=ABCMeta):
 
     @abstractmethod
-    def is_due():
+    def is_due(self):
         pass
 
 
 class DeadlinedReminder(ABC,Iterable):
 
     @abstractmethod
-    def is_due():
+    def is_due(self):
         pass
 
     def __iter__(self,text,formatted_date):       
