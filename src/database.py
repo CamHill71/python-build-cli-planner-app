@@ -4,7 +4,7 @@
 """
 import csv
 from src.reminder import PoliteReminder
-from src.deadlined_reminders import Datereminder
+from src.deadlined_reminders import DateReminder
 
 
 def list_reminders():
