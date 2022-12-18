@@ -34,4 +34,7 @@ class DateReminder(DeadlinedReminder):
     def is_due(self):
         return self.date < datetime.now()     
 
-#rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+    def __iter__(self):
+        return iter([self.text,self.date.isoformat()]) 
+
+

@@ -20,7 +20,7 @@ def list_reminders():
         print()
 
 def add_reminder(text,date):
-    reminder = Datereminder(text,date)
+    reminder = DateReminder(text,date)
 
     with open('reminders.csv', 'a+', newline='\n') as file:
         writer = csv.writer(file)
